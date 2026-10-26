@@ -64,8 +64,8 @@ keymap {
             &mt LSHFT ESC   &kp Z   &kp X   &kp C   &kp V   &kp B   &kp N   &kp M   &kp COMMA &kp DOT &kp FSLH &mt RSHFT GRAVE
             &mt LALT LBKT   &mt LGUI MINUS   &lt 1 LANG2   &mt LSHFT SPACE   &lt 2 RET   &lt 1 LANG1   &lt 3 RBKT   &kp DEL
         >;
-		//&ec_ms_lとrは、上のビヘイビアで作ったもの。
-        sensor-bindings = <&ec_ms_l SCRL_LEFT SCRL_RIGHT &ec_ms_r SCRL_DOWN SCRL_UP>;
+        // 左: 音量調節 (Down / Up), 右: 画面の拡大縮小 (Cmd - / Cmd +)
+        sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp LG(MINUS) LG(PLUS)>;
     };
 	
     layer_1 {
@@ -84,8 +84,8 @@ keymap {
             &trans    &trans    &kp LS(N1) &kp LS(N2) &kp LS(N3) &trans    &kp N0    &kp N1    &kp N2    &kp N3    &trans    &trans
             &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
         >;
-		//レイヤー2のときだけ、左手のエンコーダを回すとボリュームの上下ができるようになっています。
-		sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &ec_ms_r SCRL_DOWN SCRL_UP>;
+		// 左: 音量調節 (Down / Up), 右: 画面の拡大縮小 (Cmd - / Cmd +)
+		sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp LG(MINUS) LG(PLUS)>;
 
     };
 
